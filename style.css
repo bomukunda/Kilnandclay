@@ -1,0 +1,323 @@
+
+:root {
+  --cream: #f6f3ee;
+  --ink: #29231f;
+  --clay: #b9502c;
+  --peach: #dfbba5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: "Inter", sans-serif;
+}
+
+.navbar {
+  min-height: 78px;
+  padding: 20px 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #99938d;
+}
+
+.logo {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: -1.5px;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+nav a:hover {
+  color: var(--clay);
+}
+
+.hero {
+  padding: 65px 4% 60px;
+}
+
+.hero-top {
+  display: grid;
+  grid-template-columns: 1.5fr 0.8fr;
+  gap: 45px;
+  align-items: end;
+  margin-bottom: 65px;
+}
+
+.hero h1 {
+  font-size: clamp(75px, 9vw, 140px);
+  line-height: 0.78;
+  letter-spacing: -0.09em;
+  font-weight: 900;
+}
+
+.intro {
+  max-width: 330px;
+  padding-bottom: 8px;
+}
+
+.intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--clay);
+  color: white;
+  text-decoration: none;
+  padding: 14px 23px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background 0.25s, transform 0.25s;
+}
+
+.btn:hover {
+  background: var(--ink);
+  transform: translateY(-2px);
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 0.9fr;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.photo {
+  position: relative;
+  height: 390px;
+  overflow: hidden;
+  background: var(--peach);
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.photo:hover img {
+  transform: scale(1.04);
+}
+
+.photo span {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  text-shadow: 0 1px 5px #333;
+}
+
+.photo-arch {
+  border-radius: 220px 220px 0 0;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 55px 4%;
+  border-top: 1px solid #99938d;
+  border-bottom: 1px solid #99938d;
+}
+
+.stats h2 {
+  font-size: 60px;
+  line-height: 1;
+  color: var(--clay);
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.stats p {
+  font-size: 14px;
+}
+
+.classes {
+  padding: 85px 4%;
+}
+
+.eyebrow {
+  color: var(--clay);
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.classes > h2,
+.booking h2 {
+  font-size: clamp(40px, 6vw, 75px);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin-bottom: 40px;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.class-card img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  background: var(--peach);
+}
+
+.class-card h3 {
+  margin: 18px 0 8px;
+  font-size: 22px;
+}
+
+.class-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.booking {
+  margin-top: 85px;
+  padding: 55px;
+  background: var(--peach);
+}
+
+.booking h2 {
+  font-size: clamp(36px, 5vw, 60px);
+  margin-bottom: 18px;
+}
+
+.booking p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+footer {
+  border-top: 1px solid #99938d;
+  padding: 25px 4%;
+  font-size: 12px;
+}
+
+/* Mobile phones and tablets */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 20px 5%;
+    gap: 15px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  nav {
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 50px 5% 35px;
+  }
+
+  .hero-top {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-bottom: 35px;
+  }
+
+  .hero h1 {
+    font-size: clamp(68px, 16vw, 110px);
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .photo {
+    height: 300px;
+  }
+
+  .photo-arch {
+    height: 350px;
+    border-radius: 180px 180px 0 0;
+  }
+
+  .stats {
+    padding: 35px 5%;
+    gap: 12px;
+  }
+
+  .stats h2 {
+    font-size: 42px;
+  }
+
+  .stats p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  .classes {
+    padding: 55px 5%;
+  }
+
+  .class-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .class-card img {
+    height: 280px;
+  }
+
+  .booking {
+    padding: 30px 22px;
+    margin-top: 55px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}
